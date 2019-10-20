@@ -14,9 +14,10 @@
 	
     <script >
     	var iteration= 1;
+	// Stockeer le temps du début dans la variables startTime
     	var startTime = new Date().getTime();
     	console.log(startTime);
-    	//definition de la fonction qui génère le nbr aléatoire
+    	//définition de la fonction qui génère le nbr aléatoire
     	function getRandomInt(min, max) {
 		  min = Math.ceil(min); //retourne la valeur de l'arrondi sup
 		  max = Math.floor(max); //retourne la valeur de l'arrondi min
@@ -25,6 +26,7 @@
 		}
 		//definition des variables
 		var res=getRandomInt(0,100);//appel de la fonction 
+	    	//afficher le nombre aléatoire à la console du navigateur 
 		console.log(res);
 		function testNbr(rep){
 		    if(rep < res){
