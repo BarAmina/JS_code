@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Nombre aleatoire</title>
+  </head>
+  <body>
+  	
+    <h2 style="color: blue">Devinez un nombre aléatoire</h2>
+    <p>On a générer un nombre aléatoire entre 0 et 100. Ecrivez votre choix dans la case ci-dessous </p>
+    <button id="button"> Choisir </button>
+    <p id="resultatJeu"></p>
+    
+	
+    <script >
+    	var iteration= 1;
+    	var startTime = new Date().getTime();
+    	console.log(startTime);
+    	//definition de la fonction qui génère le nbr aléatoire
+    	function getRandomInt(min, max) {
+		  min = Math.ceil(min); //retourne la valeur de l'arrondi sup
+		  max = Math.floor(max); //retourne la valeur de l'arrondi min
+		  res= Math.floor(Math.random() * (max - min)) + min;
+		  return res; 
+		}
+		//definition des variables
+		var res=getRandomInt(0,100);//appel de la fonction 
+		console.log(res);
+		function testNbr(rep){
+		    if(rep < res){
+			   		alert("le nombre est plus grand");
+			   		iteration+=1;
+			   }
+		    if(rep > res){
+			   		alert("le nombre est plus petit");
+			   		iteration+=1;
+			   }
+			if(rep == res){
+			   		alert("Bravo! tu as deviné le nombre c'est "+rep);
+			   		var endTime= new Date().getTime();
+					var temps= endTime-startTime;
+					document.getElementById("resultatJeu").innerHTML ="Vous avez trouvez le bon nombre en "+ iteration +" itérations et en un temps de " + temps +" secondes";
+			   }	
+		   
+		}
+		document.getElementById("button").onclick = function() {
+				var msg = prompt('message');
+				var rep =parseInt(msg);
+				testNbr(rep);
+			   
+		}
+		
+
+		
+		
+		
+		
+    </script>
+    
+
+    
+  </body>
+</html>
