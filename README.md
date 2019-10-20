@@ -1,2 +1,2 @@
 # JS_code
-une repository qui inclut des scripts indépendants du code javascript 
+un repository qui inclut des scripts indépendants du code javascript 
