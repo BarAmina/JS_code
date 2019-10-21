@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SVG</title>
+    <style>
+        .aiguille {
+            stroke: darkmagenta;
+            stroke-width: 1;
+            transition: transform 500ms;
+        }
+        svg#out {
+            border: 1px solid gray
+        }
+        .grad {
+            stroke: darkmagenta;
+            stroke-width: 1;
+        }
+    </style>
+</head>
+<body>
+<svg id="out" width="500" height="500" viewbox="-50, -50, 100, 100">
+    <line x1="0" y1="0" x2="0" y2="-40" class="sec aiguille"> </line>
+    <circle cx="0" cx="0" r="3" class="aiguille"></circle>
+</svg>
+
+<script src="horloge_svg.js"></script>
+</body>
+</html>
