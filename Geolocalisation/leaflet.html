@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>page pour la géolocalisation </title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+   <!-- Make sure you put this AFTER Leaflet's CSS -->
+     <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+       integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+       crossorigin=""></script>
+    <style >
+    	#map { 
+            height: 400px; 
+        }
+    </style>
+  </head>
+  <body>
+    <h2> Géolocalisation</h2>
+    <label>Afficher coordonnées:<input type="checkbox" id="myCheck" name="coordDiv" onclick="addCoordsDiv()"></label>
+    <div id="coords" style="height: 10px;"></div><br>
+
+    <div id="map"></div>
+    <button id="button"> Géolocaliser votre position</button><br>
+
+    <h4>Formulaire</h4>
+    <form  id="form" action="#">
+    <label>Champ recherche :</label><input id="recherche" type="search">
+    <input type="submit" name="envoi" value="OK">
+    </form>
+    
+    <script src="leaflet..js"></script>
+  </body>
+</html>
