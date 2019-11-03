@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>HH:MM:SS</title>
+    <style >
+        #horloge{
+            font-size: 200px; 
+            width: 50%;
+            padding: 50px; 
+        }
+    </style>
+  </head>
+  <body>
+    <div id="horloge"></div>
+    <hr>
+    <button id="creer">Creer un paragraphe</button>
+    <div id="para"></div>
+        <script>
+            //setInterval(f, 1000)
+            console.log("Le code continue son exécution");
+            var out = document.querySelector('#horloge')
+            setInterval(function () {
+                out.innerText = getHour();
+            }, 1000)
+
+            function getHour() {
+                var d = new Date();
+                var h = d.getHours();
+                var m = d.getMinutes();
+                var s = d.getSeconds();
+                h = h <= 9 ? '0' + h : h;
+                m = m <= 9 ? '0' + m : m;
+                s = s <= 9 ? '0' + s : s;
+                //changer la couleur de l'horloge apres 10s en rouge 
+                if(s%10==0){
+                    out.style.color='red';
+                }else{
+                    out.style.color='gray';
+                }   
+                return h + ':' + m + ':' + s;
+            }
+            //generer un paragraph en cliquant sur le bouton
+            var button = document.getElementById("creer");
+
+            button.addEventListener("click", function(event){
+                console.log("L'événement " + event + " a été déclenché");
+                document.querySelector("#para").innerHTML = "<p> Heure en JavaScript </p>";
+            });
+            
+        </script>
+    </body>
+</html>
